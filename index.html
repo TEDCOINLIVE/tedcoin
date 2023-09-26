@@ -30,7 +30,7 @@
         h5 {
             color: rgb(234, 57, 184);
             font-size: 1.5em; /* Increase the size */
-            margin-left: 2em; /* Move text to the right */
+            margin-left: 3em; /* Move text more to the right */
         }
 
         @keyframes breathing {
@@ -56,6 +56,7 @@
         /* "Coming soon..." animation */
         .coming-soon {
             font-size: 2em; /* Make the text larger */
+            font-family: 'Impact', sans-serif; /* Specify the Impact font */
             position: relative; /* Relative positioning for the animated ellipsis */
             color: #32f7df; /* Set new color */
         }
@@ -64,7 +65,7 @@
             position: absolute; /* Position dots relative to the "Coming soon" text */
             left: 100%; /* Place dots after the text */
             content: '.';
-            animation: ellipsis 1s steps(3, end) infinite;
+            animation: ellipsis 1.5s steps(3, end) infinite; /* Slowed down by 50% */
             color: #32f7df; /* Set new color */
         }
 
@@ -89,9 +90,6 @@
         <h5>neutral platform. no feds. secure &amp; discreet data.</h5>
     </div>
     <br>
-    <div>
-        <h3></h3> <!-- Empty h3 tag? -->
-    </div>
     <!-- New "Coming soon..." Text -->
     <div class="coming-soon">
         Coming soon
