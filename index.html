@@ -65,19 +65,25 @@
             position: absolute; /* Position dots relative to the "Coming soon" text */
             left: 100%; /* Place dots after the text */
             content: '.';
-            animation: ellipsis 1.5s steps(3, end) infinite; /* Slowed down by 50% */
+            animation: ellipsis 3s steps(5, end) infinite; /* Slowed down further */
             color: #32f7df; /* Set new color */
         }
 
         @keyframes ellipsis {
-            0%, 33% {
+            0%, 20% {
                 content: '.';
             }
-            34%, 66% {
+            21%, 40% {
                 content: '..';
             }
-            67%, 100% {
+            41%, 60% {
                 content: '...';
+            }
+            61%, 80% {
+                content: '....';
+            }
+            81%, 100% {
+                content: '.....';
             }
         }
     </style>
