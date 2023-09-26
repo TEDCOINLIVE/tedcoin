@@ -18,44 +18,43 @@
         /* New Container Styling */
         .content-container {
             background: linear-gradient(rgba(90, 0, 90, 0.6), rgba(42, 42, 42, 0.6));
-            padding: 150px; /* Increased padding to make the box bigger */
+            padding: 150px;
             border-radius: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            box-shadow: 0 0 0 5px #32f7df;  /* Added this line for the border */
         }
 
         img {
-            max-width: 100%; /* Ensure GIF is responsive */
+            max-width: 100%;
         }
 
-        /* Removed Breathing Animation from h1 */
         h1 {
-            color: gold; /* Set gold color */
-            text-align: center; /* Center the text */
+            color: gold;
+            text-align: center;
         }
 
         h5 {
             color: rgb(234, 57, 184);
-            font-size: 1.5em; /* Increase the size */
-            margin-left: 3em; /* Move text more to the right */
+            font-size: 1.5em;
+            margin-left: 3em;
         }
 
-        /* Breathing Animation for coming-soon */
         .coming-soon {
             animation: breathing 3s ease-in-out infinite both;
-            font-size: 2em; /* Make the text larger */
-            font-family: 'Impact', sans-serif; /* Specify the Impact font */
-            position: relative; /* Relative positioning for the animated ellipsis */
-            color: #32f7df; /* Set new color */
+            font-size: 2em;
+            font-family: 'Impact', sans-serif;
+            position: relative;
+            color: #32f7df;
         }
 
         .coming-soon::after {
-            position: absolute; /* Position dots relative to the "Coming soon" text */
-            left: 100%; /* Place dots after the text */
+            position: absolute;
+            left: 100%;
             content: '.';
-            animation: ellipsis 3s steps(5, end) infinite; /* Slowed down further */
-            color: #32f7df; /* Set new color */
+            animation: ellipsis 3s steps(5, end) infinite;
+            color: #32f7df;
         }
 
         @keyframes breathing {
@@ -98,16 +97,13 @@
     </style>
 </head>
 <body>
-    <!-- New Container -->
     <div class="content-container">
         <img src="3ddd.gif" alt="Centered GIF">
-        <!-- Existing Text -->
         <div>
             <h1>livestream TTS donations</h1>
             <h5>neutral platform. open sourced. no feds. secure &amp; discreet data.</h5>
         </div>
         <br>
-        <!-- "Coming soon..." Text -->
         <div class="coming-soon">
             Coming soon
         </div>
