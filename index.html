@@ -29,20 +29,33 @@
             max-width: 100%; /* Ensure GIF is responsive */
         }
 
-        /* Breathing Animation */
-        h1, .coming-soon {
-            animation: breathing 3s ease-in-out infinite both;
-            text-align: center; /* Center the text */
-        }
-
+        /* Removed Breathing Animation from h1 */
         h1 {
             color: gold; /* Set gold color */
+            text-align: center; /* Center the text */
         }
 
         h5 {
             color: rgb(234, 57, 184);
             font-size: 1.5em; /* Increase the size */
             margin-left: 3em; /* Move text more to the right */
+        }
+
+        /* Breathing Animation for coming-soon */
+        .coming-soon {
+            animation: breathing 3s ease-in-out infinite both;
+            font-size: 2em; /* Make the text larger */
+            font-family: 'Impact', sans-serif; /* Specify the Impact font */
+            position: relative; /* Relative positioning for the animated ellipsis */
+            color: #32f7df; /* Set new color */
+        }
+
+        .coming-soon::after {
+            position: absolute; /* Position dots relative to the "Coming soon" text */
+            left: 100%; /* Place dots after the text */
+            content: '.';
+            animation: ellipsis 3s steps(5, end) infinite; /* Slowed down further */
+            color: #32f7df; /* Set new color */
         }
 
         @keyframes breathing {
@@ -63,21 +76,6 @@
                 transform: scale(1);
                 opacity: 1;
             }
-        }
-
-        .coming-soon {
-            font-size: 2em; /* Make the text larger */
-            font-family: 'Impact', sans-serif; /* Specify the Impact font */
-            position: relative; /* Relative positioning for the animated ellipsis */
-            color: #32f7df; /* Set new color */
-        }
-
-        .coming-soon::after {
-            position: absolute; /* Position dots relative to the "Coming soon" text */
-            left: 100%; /* Place dots after the text */
-            content: '.';
-            animation: ellipsis 3s steps(5, end) infinite; /* Slowed down further */
-            color: #32f7df; /* Set new color */
         }
 
         @keyframes ellipsis {
