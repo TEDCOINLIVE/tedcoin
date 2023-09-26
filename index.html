@@ -21,13 +21,15 @@
         }
 
         /* Animated Text Styles */
-        h1, h5, h3 {
+        h1, h3 {
+            color: gold; /* Set gold color */
             animation: fadeInPulse 3s infinite;
             text-align: center; /* Center the text */
         }
 
         h5 {
             color: rgb(234, 57, 184);
+            font-size: 1.5em; /* Increase the size */
         }
 
         @keyframes fadeInPulse {
@@ -49,13 +51,15 @@
         .coming-soon {
             font-size: 2em; /* Make the text larger */
             position: relative; /* Relative positioning for the animated ellipsis */
+            animation: fadeInPulse 3s infinite;
         }
 
-        .ellipsis {
+        .coming-soon::after {
             position: absolute; /* Position dots relative to the "Coming soon" text */
             left: 100%; /* Place dots after the text */
             content: '.';
             animation: ellipsis 1s steps(3, end) infinite;
+            color: gold; /* Set gold color */
         }
 
         @keyframes ellipsis {
@@ -84,7 +88,7 @@
     </div>
     <!-- New "Coming soon..." Text -->
     <div class="coming-soon">
-        Coming soon<span class="ellipsis"></span>
+        Coming soon
     </div>
 </body>
 </html>
