@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TED Coin</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- This is the added favicon link -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             margin: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column; /* Stack children vertically */
             align-items: center;
             justify-content: center;
             background-color: #232628; /* Dark gray background */
@@ -18,9 +19,72 @@
         img {
             max-width: 100%; /* Ensure GIF is responsive */
         }
+
+        /* Animated Text Styles */
+        h1, h5, h3 {
+            animation: fadeInPulse 3s infinite;
+            text-align: center; /* Center the text */
+        }
+
+        h5 {
+            color: rgb(234, 57, 184);
+        }
+
+        @keyframes fadeInPulse {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 0.85;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* "Coming soon..." animation */
+        .coming-soon {
+            font-size: 2em; /* Make the text larger */
+            position: relative; /* Relative positioning for the animated ellipsis */
+        }
+
+        .ellipsis {
+            position: absolute; /* Position dots relative to the "Coming soon" text */
+            left: 100%; /* Place dots after the text */
+            content: '.';
+            animation: ellipsis 1s steps(3, end) infinite;
+        }
+
+        @keyframes ellipsis {
+            0%, 33% {
+                content: '.';
+            }
+            34%, 66% {
+                content: '..';
+            }
+            67%, 100% {
+                content: '...';
+            }
+        }
     </style>
 </head>
 <body>
     <img src="3ddd.gif" alt="Centered GIF">
+    <!-- Existing Text -->
+    <div>
+        <h1>livestream TTS donations</h1>
+        <h5>neutral platform. no feds. secure &amp; discreet data.</h5>
+    </div>
+    <br>
+    <div>
+        <h3></h3> <!-- Empty h3 tag? -->
+    </div>
+    <!-- New "Coming soon..." Text -->
+    <div class="coming-soon">
+        Coming soon<span class="ellipsis"></span>
+    </div>
 </body>
 </html>
