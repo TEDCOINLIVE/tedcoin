@@ -1,67 +1,25 @@
-const { createProxyMiddleware } = require('http-proxy-middleware');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered GIF</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #333333; /* Dark gray background */
+        }
 
-module.exports = function(app) {
-  // Proxy configuration for /api
-  app.use(
-    '/api',
-    createProxyMiddleware({
-      target: 'http://localhost:7777', // Replace with your backend server URL
-      changeOrigin: true,
-      onProxyReq: (proxyReq, req, res) => {
-        console.log('Proxying request:', req.url);
-      },
-      onError: (err, req, res) => {
-        console.error('Proxy error:', err);
-        res.status(500).send('Proxy Error');
-      },
-    })
-  );
-
-  // Proxy configuration for /powerding/payment
-  app.use(
-    '/powerding/payment',
-    createProxyMiddleware({
-      target: 'http://localhost:7777', // Replace with your backend server URL
-      changeOrigin: true,
-      onProxyReq: (proxyReq, req, res) => {
-        console.log('Proxying request:', req.url);
-      },
-      onError: (err, req, res) => {
-        console.error('Proxy error:', err);
-        res.status(500).send('Proxy Error');
-      },
-    })
-  );
-
-  // Proxy configuration for /powerding
-  app.use(
-    '/powerding',
-    createProxyMiddleware({
-      target: 'http://localhost:7777', // Replace with your backend server URL
-      changeOrigin: true,
-      onProxyReq: (proxyReq, req, res) => {
-        console.log('Proxying request:', req.url);
-      },
-      onError: (err, req, res) => {
-        console.error('Proxy error:', err);
-        res.status(500).send('Proxy Error');
-      },
-    })
-  );
-
-  // Proxy configuration for /user/
-  app.use(
-    '/user',
-    createProxyMiddleware({
-      target: 'http://localhost:7777', // Replace with your backend server URL
-      changeOrigin: true,
-      onProxyReq: (proxyReq, req, res) => {
-        console.log('Proxying request:', req.url);
-      },
-      onError: (err, req, res) => {
-        console.error('Proxy error:', err);
-        res.status(500).send('Proxy Error');
-      },
-    })
-  );
-};
+        img {
+            max-width: 100%; /* Ensure GIF is responsive */
+        }
+    </style>
+</head>
+<body>
+    <img src="3ddd.gif" alt="Centered GIF">
+</body>
+</html>
