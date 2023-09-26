@@ -17,9 +17,9 @@
 
         /* New Container Styling */
         .content-container {
-            background-color: purple;
-            padding: 20px;
-            border-radius: 15px; /* Rounded corners */
+            background-color: rgba(128, 0, 128, 0.3); /* Purple with 30% transparency */
+            padding: 50px; /* Increased padding to make the box bigger */
+            border-radius: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -30,10 +30,13 @@
         }
 
         /* Breathing Animation */
-        h1, h3 {
-            color: gold; /* Set gold color */
+        h1, .coming-soon {
             animation: breathing 3s ease-in-out infinite both;
             text-align: center; /* Center the text */
+        }
+
+        h1 {
+            color: gold; /* Set gold color */
         }
 
         h5 {
