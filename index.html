@@ -10,10 +10,19 @@
             margin: 0;
             height: 100vh;
             display: flex;
-            flex-direction: column; /* Stack children vertically */
             align-items: center;
             justify-content: center;
             background-color: #232628; /* Dark gray background */
+        }
+
+        /* New Container Styling */
+        .content-container {
+            background-color: purple;
+            padding: 20px;
+            border-radius: 15px; /* Rounded corners */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         img {
@@ -53,7 +62,6 @@
             }
         }
 
-        /* "Coming soon..." animation */
         .coming-soon {
             font-size: 2em; /* Make the text larger */
             font-family: 'Impact', sans-serif; /* Specify the Impact font */
@@ -89,16 +97,19 @@
     </style>
 </head>
 <body>
-    <img src="3ddd.gif" alt="Centered GIF">
-    <!-- Existing Text -->
-    <div>
-        <h1>livestream TTS donations</h1>
-        <h5>neutral platform. open sourced. no feds. secure &amp; discreet data.</h5>
-    </div>
-    <br>
-    <!-- New "Coming soon..." Text -->
-    <div class="coming-soon">
-        Coming soon
+    <!-- New Container -->
+    <div class="content-container">
+        <img src="3ddd.gif" alt="Centered GIF">
+        <!-- Existing Text -->
+        <div>
+            <h1>livestream TTS donations</h1>
+            <h5>neutral platform. open sourced. no feds. secure &amp; discreet data.</h5>
+        </div>
+        <br>
+        <!-- "Coming soon..." Text -->
+        <div class="coming-soon">
+            Coming soon
+        </div>
     </div>
 </body>
 </html>
